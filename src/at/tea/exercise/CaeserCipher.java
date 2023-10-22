@@ -26,3 +26,4 @@ public class CaeserCipher {
         System.out.println("Decrypted: " + decryptedText);
     }
 }
+
