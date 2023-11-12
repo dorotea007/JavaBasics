@@ -20,6 +20,15 @@ public class Main1 {
         c2.drive();
         System.out.println(c2.fuelAmount);
 
+        c1.turboBoost();
+
+        c1.honk(10);
+
+        c1.getRemainingRange();
+
+        c1.setColor("Red");
+        c2.setColor("Blue");
+
     }
 }
 
