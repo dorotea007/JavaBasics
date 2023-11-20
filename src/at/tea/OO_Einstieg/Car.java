@@ -1,27 +1,30 @@
 package at.tea.OO_Einstieg;
 
 public class Car {
+    private Engine engine;
+    private int honkCounter;
     private int fuelAmount;
-    public int fuelConsumption;
+    private int fuelConsumption;
     private int tankVolume;
     private String serialNumber;
     private String brand;
     private String color;
 
-    public Car(int fuelConsumption, String brand, String serialNumber) {
-        this.fuelConsumption = fuelConsumption;
+    public Car(Engine engine, String brand, String color) {
+        this.engine = engine;
         this.brand = brand;
-        this.serialNumber = serialNumber;
+        this.color = color;
+        this.honkCounter = 0;
     }
 
     public void drive() {
-        this.fuelAmount = this.fuelAmount - fuelConsumption;
+        this.fuelAmount -= fuelConsumption;
         System.out.println("I am driving!");
     }
 
     public void brake() {
 
-        System.out.println("Ich bremse!");
+        System.out.println("I am breaking");
     }
 
     public void turboBoost() {
@@ -95,5 +98,13 @@ public class Car {
 
     public String getSerialNumber() {
         return serialNumber;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 }
