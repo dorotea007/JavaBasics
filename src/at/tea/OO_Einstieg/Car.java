@@ -9,6 +9,7 @@ public class Car {
     private String serialNumber;
     private String brand;
     private String color;
+    private int speed;
 
     public Car(Engine engine, String brand, String color) {
         this.engine = engine;
@@ -17,9 +18,13 @@ public class Car {
         this.honkCounter = 0;
     }
 
-    public void drive() {
-        this.fuelAmount -= fuelConsumption;
-        System.out.println("I am driving!");
+    public void drive(int speed) {
+        if (fuelAmount >= fuelConsumption) {
+            this.fuelAmount -= fuelConsumption;
+            System.out.println("I am driving!");
+        } else {
+            System.out.println("Not enough fuel to drive!");
+        }
     }
 
     public void brake() {
@@ -37,11 +42,11 @@ public class Car {
 
     }
 
-    public void honk(int amountOfRepetitions) {
-        for (int i = 0; i < amountOfRepetitions; i++) {
-            System.out.println("Tuuut");
-        }
+    public void honk() {
+        System.out.println("Ich bin ein " + this.brand + " und habe die Farbe " + this.color + " und habe " + this.engine.getHorsePower() + " PS");
+        this.honkCounter++;
     }
+
 
     public void getRemainingRange() {
         if (fuelConsumption != 0) {
@@ -68,12 +73,21 @@ public class Car {
         this.tankVolume = tankVolume;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+
+    public String getBrand() {
+        return brand;
     }
 
     public void setBrand(String brand) {
         this.brand = brand;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public int getFuelAmount() {
@@ -88,13 +102,6 @@ public class Car {
         return tankVolume;
     }
 
-    public String getBrand() {
-        return brand;
-    }
-
-    public String getColor() {
-        return color;
-    }
 
     public String getSerialNumber() {
         return serialNumber;
@@ -107,4 +114,6 @@ public class Car {
     public void setEngine(Engine engine) {
         this.engine = engine;
     }
+
+
 }
