@@ -1,40 +1,49 @@
 package at.tea.OO_Einstieg;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car {
     private Engine engine;
-    private int honkCounter;
+    private List<RearMirror> mirrors;
     private int fuelAmount;
     private int fuelConsumption;
     private int tankVolume;
     private String serialNumber;
     private String brand;
     private String color;
-    private int speed;
 
-    public Car(Engine engine, String brand, String color) {
+    public Car(Engine engine, String brand, String color, String serialNumber, int fuelConsumption, int tankVolume) {
         this.engine = engine;
         this.brand = brand;
         this.color = color;
-        this.honkCounter = 0;
+        this.serialNumber = serialNumber;
+        this.fuelConsumption = fuelConsumption;
+        this.fuelAmount = 0;
+        this.tankVolume = tankVolume;
+        this.mirrors = new ArrayList<>();
+    }
+
+    public void addMirror(RearMirror rearMirror) {
+        this.mirrors.add(rearMirror);
+    }
+
+    public List<RearMirror> getMirrors() {
+        return mirrors;
     }
 
     public void drive(int speed) {
-        if (fuelAmount >= fuelConsumption) {
-            this.fuelAmount -= fuelConsumption;
-            System.out.println("I am driving!");
-        } else {
-            System.out.println("Not enough fuel to drive!");
-        }
+        this.fuelAmount -= fuelConsumption;
+        System.out.println("I am driving!");
+        engine.drive(speed);
     }
 
     public void brake() {
-
         System.out.println("I am breaking");
     }
 
     public void turboBoost() {
-        double fuelPercentage = ((double) fuelAmount / tankVolume);
-        if (fuelPercentage > 0.1) {
+        if (((double) fuelAmount / tankVolume > 0.1)) {
             System.out.println("Engaging super boost!");
         } else {
             System.out.println("Insufficient fuel for super boost");
@@ -42,9 +51,9 @@ public class Car {
 
     }
 
-    public void honk() {
-        System.out.println("Ich bin ein " + this.brand + " und habe die Farbe " + this.color + " und habe " + this.engine.getHorsePower() + " PS");
-        this.honkCounter++;
+    public void honk(int amountOfRepetitions) {
+        for (int i = 0; i < amountOfRepetitions; i++)
+            System.out.println("Tuuut");
     }
 
 
@@ -56,23 +65,6 @@ public class Car {
             System.out.println("Error: Fuel consumption cannot be zero.");
         }
     }
-
-    public void setFuelConsumption(int fuelConsumption) {
-        this.fuelConsumption = fuelConsumption;
-    }
-
-    public void setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
-    }
-
-    public void setFuelAmount(int fuelAmount) {
-        this.fuelAmount = fuelAmount;
-    }
-
-    public void setTankVolume(int tankVolume) {
-        this.tankVolume = tankVolume;
-    }
-
 
     public String getBrand() {
         return brand;
@@ -94,17 +86,32 @@ public class Car {
         return fuelAmount;
     }
 
+    public void setFuelAmount(int fuelAmount) {
+        this.fuelAmount = fuelAmount;
+    }
+
     public int getFuelConsumption() {
         return fuelConsumption;
+    }
+
+    public void setFuelConsumption(int fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
     }
 
     public int getTankVolume() {
         return tankVolume;
     }
 
+    public void setTankVolume(int tankVolume) {
+        this.tankVolume = tankVolume;
+    }
 
     public String getSerialNumber() {
         return serialNumber;
+    }
+
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
     }
 
     public Engine getEngine() {
@@ -114,6 +121,4 @@ public class Car {
     public void setEngine(Engine engine) {
         this.engine = engine;
     }
-
-
 }
