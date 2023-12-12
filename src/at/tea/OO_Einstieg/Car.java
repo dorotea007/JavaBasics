@@ -6,6 +6,7 @@ import java.util.List;
 public class Car {
     private Engine engine;
     private List<RearMirror> mirrors;
+    private List<Wheel> wheels;
     private int fuelAmount;
     private int fuelConsumption;
     private int tankVolume;
@@ -22,6 +23,15 @@ public class Car {
         this.fuelAmount = 0;
         this.tankVolume = tankVolume;
         this.mirrors = new ArrayList<>();
+        this.wheels = new ArrayList<>();
+    }
+
+    public void addWheel(Wheel wheel) {
+        this.wheels.add(wheel);
+    }
+
+    public List<Wheel> getWheels() {
+        return wheels;
     }
 
     public void addMirror(RearMirror rearMirror) {
