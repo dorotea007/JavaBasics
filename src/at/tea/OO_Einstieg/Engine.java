@@ -13,7 +13,7 @@ public class Engine {
     }
 
     public void drive(int amount) {
-        System.out.println("The motor is running with" + amount);
+        System.out.println("The motor is running with " + amount);
     }
 
     public int getHorsePower() {
