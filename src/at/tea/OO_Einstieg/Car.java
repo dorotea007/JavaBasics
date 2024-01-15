@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Car {
     private Engine engine;
-    private final List<RearMirror> mirrors;
-    private final List<Wheel> wheels;
+    private  List<RearMirror> mirrors;
+    private  List<Wheel> wheels;
     private int fuelAmount;
     private int fuelConsumption;
     private int tankVolume;
