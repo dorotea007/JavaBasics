@@ -10,6 +10,8 @@ public class Main1 {
         RearMirror r2 = new RearMirror(90, 40);
         Wheel w1 = new Wheel(20, 30);
         Wheel w2 = new Wheel(60, 80);
+        Wheel w3 = new Wheel(60, 80);
+        Wheel w4 = new Wheel(20, 30);
 
         //Create Car
         Car c1 = new Car(e1, "Audi", "black", "A1234", 20, 200);
@@ -19,6 +21,8 @@ public class Main1 {
         c1.addMirror(r2);
         c1.addWheel(w1);
         c1.addWheel(w2);
+        c1.addWheel(w3);
+        c1.addWheel(w4);
 
         // Mirror actions
         int mirrorSize = r1.getSize();
