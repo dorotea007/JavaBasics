@@ -23,15 +23,20 @@ public class Car {
         calculateConsumption();
     }
 
+    // Calculate discounted price based on the producer's discount
     private void calculatePrice() {
         double discount = producer.getDiscount() / 100.0;
         this.price = (int) (this.basePrice - (discount * this.basePrice));
     }
 
+    // Calculate fuel consumption based on the car's distance traveled
     private void calculateConsumption() {
+        // Check if the distance traveled is less than 50000
         if (this.distance < 50000) {
+            // If true, set consumption to the base consumption
             this.consumption = this.baseConsumption;
         } else {
+            // If false, set consumption to base consumption multiplied by 1.098
             this.consumption = this.baseConsumption * 1.098;
         }
     }
