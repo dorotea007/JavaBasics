@@ -48,4 +48,19 @@ public class Car {
     public double getConsumption() {
         return consumption;
     }
+
+    //car details
+    public void printCarDetails() {
+        System.out.println("Car Details:");
+        System.out.println("Color: " + color);
+        System.out.println("Max Velocity: " + maxVelocity);
+        System.out.println("Base Price: " + basePrice);
+        System.out.println("Price: " + price);
+        System.out.println("Base Consumption: " + baseConsumption);
+        System.out.println("Consumption: " + consumption);
+        System.out.println("Distance: " + distance);
+        System.out.println("Producer: " + producer.getName());
+        System.out.println("Engine Type: " + engine.getType());
+        System.out.println("Engine Performance: " + engine.getPerformance());
+    }
 }

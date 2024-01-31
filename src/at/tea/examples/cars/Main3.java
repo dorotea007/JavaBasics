@@ -12,5 +12,7 @@ public class Main3 {
         System.out.println("Price: " + c1.getPrice());
         System.out.println("Consumption: " + c1.getConsumption());
 
+        c1.printCarDetails();
+
     }
 }
