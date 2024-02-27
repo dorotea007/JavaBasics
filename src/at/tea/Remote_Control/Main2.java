@@ -1,4 +1,4 @@
-package at.tea.OO_Remote_Control;
+package at.tea.Remote_Control;
 
 public class Main2 {
     public static void main(String[] args) {
