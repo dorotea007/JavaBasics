@@ -1,4 +1,4 @@
-package at.tea.example.lamp;
+package at.tea.example_OO.lamp;
 
 public class LightElement {
     private String name;

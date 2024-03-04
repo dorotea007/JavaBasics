@@ -1,4 +1,4 @@
-package at.tea.example.lamp;
+package at.tea.example_OO.lamp;
 
 import java.util.ArrayList;
 import java.util.List;

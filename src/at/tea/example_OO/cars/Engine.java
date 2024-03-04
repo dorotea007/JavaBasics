@@ -1,4 +1,4 @@
-package at.tea.example.cars;
+package at.tea.example_OO.cars;
 
 public class Engine {
     public enum TYPE {DIESEL, GAS}

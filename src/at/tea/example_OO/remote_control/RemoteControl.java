@@ -1,4 +1,4 @@
-package at.tea.Remote_Control;
+package at.tea.example_OO.remote_control;
 
 import java.util.ArrayList;
 import java.util.List;

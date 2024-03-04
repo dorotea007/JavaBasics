@@ -1,4 +1,4 @@
-package at.tea.example.calculator;
+package at.tea.example_OO.calculator;
 
 public class Calculator {
     public int add(int a, int b) {

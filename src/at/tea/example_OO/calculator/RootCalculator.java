@@ -1,4 +1,4 @@
-package at.tea.example.calculator;
+package at.tea.example_OO.calculator;
 
 public class RootCalculator extends Calculator {
     public double squareRoot(double number) {

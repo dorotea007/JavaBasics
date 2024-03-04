@@ -1,4 +1,4 @@
-package at.tea.example.cars;
+package at.tea.example_OO.cars;
 
 public class Main3 {
     public static void main(String[] args) {
