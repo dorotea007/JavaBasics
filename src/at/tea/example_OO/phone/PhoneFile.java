@@ -2,13 +2,17 @@ package at.tea.example_OO.phone;
 
 public class PhoneFile {
     private String extension;
-    private int size;
+    private int sizeInMB;
     private String name;
 
-    public PhoneFile(String extension, int size, String name) {
+    public PhoneFile(String extension, int sizeInMB, String name) {
         this.extension = extension;
-        this.size = size;
+        this.sizeInMB = sizeInMB;
         this.name = name;
+    }
+
+    public String getInfo() {
+        return name + "." + extension + " hat eine größe von: " + sizeInMB;
     }
 
     public String getExtension() {
@@ -16,7 +20,7 @@ public class PhoneFile {
     }
 
     public int getSize() {
-        return size;
+        return sizeInMB;
     }
 
     public String getName() {
